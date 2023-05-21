@@ -34,7 +34,7 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="login.php">
             <span>
               TNI0
             </span>
@@ -44,7 +44,7 @@
             <div class="d-none d-lg-flex ml-auto flex-column flex-lg-row align-items-center mt-3">
               <ul class="navbar-nav ">
                 <li class="nav-item">
-                  <a class="nav-link" href="service.html">
+                  <a class="nav-link" href="login.php">
                     <span>Login</span>
                   </a>
                 </li>
