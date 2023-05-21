@@ -13,6 +13,7 @@
   <meta name="author" content="" />
 
   <title>CGCDTS</title>
+  <link rel="icon" href="images/cgclogo.png" type="image/x-icon">
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
@@ -36,7 +37,7 @@
         <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="login.php">
             <span>
-              TNI0
+              CGCDTS
             </span>
           </a>
 
@@ -63,9 +64,9 @@
             </div>
             <div id="myNav" class="overlay">
               <div class="overlay-content">
-                <a href="index.phpl">Home</a>
+                <a href="index.php">Home</a>
                 <a href="about.php">About</a>
-                <a href="business.php">Business</a>
+                <a href="business.php">City Government of Calapan</a>
                 <a href="more.php">More</a>
               </div>
             </div>
@@ -81,73 +82,66 @@
   <section class="business_section layout_padding">
     <div class="container">
       <h2>
-        Gets your business discovered
+        City Government of Calapan 
       </h2>
       <p>
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout. The point of
-        using Lorem Ipsum is that it has a more-or-less normal distribution of
-        letters,
+      The City Government of Calapan oversees the administration and 
+      services of Calapan City in Oriental Mindoro, Philippines. 
+      Led by the Mayor and City Council, it provides essential 
+      programs in education, healthcare, infrastructure, public safety, 
+      and economic development. Transparency, accountability, and 
+      public engagement are key values, and collaborations with various 
+      stakeholders support the city's growth.
       </p>
     </div>
     <div class="business_container">
       <div class="content-box box-1">
         <div class="detail">
           <h3>
-            Not just a website
+            VISION
           </h3>
           <p>
-            It is a long established fact that a r <br />
-            eader will be distracted by the readable content <br />
-            of a page when looking at i <br />
-            ts layout. The point of usin <br />
-            g Lorem Ipsum is that it has a more-or-less normal <br />
-            distribution of letters,
+          METRO CALAPAN 2026: MIMAROPA’s</br>
+          Premier of Investments and </br>
+          Agro-industry.</br>
           </p>
-        </div>
-        <div>
-          <a href="">
-            read More
-          </a>
         </div>
       </div>
       <div class="content-box box-2">
         <div class="detail">
           <h3>
-            Hosting & maintenance included
+            MISSION
           </h3>
           <p>
-            It is a long established fact that a r <br />
-            eader will be distracted by the readable content <br />
-            of a page when looking at i <br />
-            ts layout. The point of usin <br />
-            g Lorem Ipsum is that it has a more-or-less normal <br />
-            distribution of letters,
+          The City of Calapan shall initiate and </br>
+          sustain programs to create an environment </br>
+          conducive to development and progress </br>
+          thru transparent and participatory </br>
+          governance.</br>
           </p>
         </div>
-        <div>
-          <a href="">
-            read More
-          </a>
-        </div>
+
       </div>
       <div class="content-box box-3">
         <div class="detail">
           <h3>
-            Connect with your customers
+            City Government of </br>
+            Calapan Offical Website</br>
           </h3>
           <p>
-            It is a long established fact that a r <br />
-            eader will be distracted by the readable content <br />
-            of a page when looking at i <br />
-            ts layout. The point of usin <br />
-            g Lorem Ipsum is that it has a more-or-less normal <br />
-            distribution of letters,
+          Explore the official website of the City Government </br>
+          of Calapan for up-to-date information on </br> 
+          governance, development projects, and </br>
+          community initiatives. </br>
+          Access government services, programs, and resources </br>
+          that cater to the needs of our vibrant city. Stay </br>
+          informed and engaged with the latest news and </br>
+          updates from Calapan City's administration.</br>
           </p>
         </div>
         <div>
-          <a href="">
-            read More
+          <a href="https://cityofcalapan.gov.ph/">
+            Visit Site
           </a>
         </div>
       </div>
@@ -161,7 +155,7 @@
   <section class="info_section layout_padding">
     <div class="info-logo">
       <h2>
-        TNI0
+        CGCDTS
       </h2>
     </div>
     <div class="container">
@@ -176,7 +170,7 @@
             </div>
             <div class="detail-box">
               <p>
-                Lorem Ipsum is simply dummy text
+                Brgy. Guinobatan, Calapan City, Oriental Mindoro
               </p>
             </div>
           </div>
@@ -188,7 +182,7 @@
             </div>
             <div class="detail-box">
               <p>
-                +02 1234567890
+                +63 9485598856 
               </p>
             </div>
           </div>
@@ -200,7 +194,7 @@
             </div>
             <div class="detail-box">
               <p>
-                demo@gmail.com
+                citygovernmentofcalapan@gmail.com
               </p>
             </div>
           </div>
@@ -208,23 +202,7 @@
       </div>
     </div>
     <div class="partner-box">
-      <h4>
-        Our Partner
-      </h4>
-      <div class="box">
-        <a href="">
-          <img src="images/google.png" alt="">
-        </a>
-        <a href="">
-          <img src="images/yahoo.png" alt="">
-        </a>
-        <a href="">
-          <img src="images/mastercard.png" alt="">
-        </a>
-        <a href="">
-          <img src="images/jcb.png" alt="">
-        </a>
-      </div>
+      
     </div>
   </section>
 
@@ -235,8 +213,7 @@
   <!-- footer section -->
   <section class="container-fluid footer_section">
     <p>
-      &copy; 2020 All Rights Reserved. Design by
-      <a href="https://html.design/">Free Html Templates</a> Distribution <a href="https://themewagon.com">ThemeWagon</a>
+    &copy; <?php echo date("Y"); ?> All Rights Reserved. Design by CAPSTONE TEAM GROUP 1 - City College of Calapan
     </p>
   </section>
   <!-- footer section -->

@@ -13,6 +13,7 @@
   <meta name="author" content="" />
 
   <title>CGCDTS</title>
+  <link rel="icon" href="images/cgclogo.png" type="image/x-icon">
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
@@ -34,9 +35,9 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="index.php">
             <span>
-              TNI0
+              CGCDTS
             </span>
           </a>
 
@@ -65,7 +66,7 @@
               <div class="overlay-content">
                 <a href="index.php">Home</a>
                 <a href="about.php">About</a>
-                <a href="business.php">Business</a>
+                <a href="business.php">City Government of Calapan</a>
                 <a href="more.php">More</a>
               </div>
             </div>
@@ -82,10 +83,8 @@
     <div class="row">
       <div class="col-md-5 offset-md-1">
         <div class="img-box">
-          <img src="images/about.png" alt="" />
-          <div class="play_btn-box">
-            <div class="play-btn"></div>
-          </div>
+          <img src="" alt="" />
+          
         </div>
       </div>
       <div class="col-md-6 col-lg-4">
@@ -94,13 +93,12 @@
             About Us
           </h3>
           <p>
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The
-            point of using LoremIt is a long established fact that a reader
-            will be distracted by the readable content of a page when looking
-            at its layout. The point of using LoremIt is a long established
-            fact that a reader will be distracted by the readable content of a
-            page when looking at its layout. The point of using Lorem
+          Welcome to the City Government of Calapan Document Tracking System! 
+          We are dedicated to enhancing transparency, efficiency, and accountability 
+          in our administrative processes. Our system automates document workflows, 
+          provides real-time status updates, and ensures secure data management. 
+          Join us in our mission to revolutionize document management and deliver 
+          exceptional public service in Calapan.
           </p>
         </div>
       </div>
@@ -115,7 +113,7 @@
   <section class="info_section layout_padding">
     <div class="info-logo">
       <h2>
-        TNI0
+        CGCDTS
       </h2>
     </div>
     <div class="container">
@@ -130,7 +128,7 @@
             </div>
             <div class="detail-box">
               <p>
-                Lorem Ipsum is simply dummy text
+                Brgy. Guinobatan, Calapan City, Oriental Mindoro
               </p>
             </div>
           </div>
@@ -142,7 +140,7 @@
             </div>
             <div class="detail-box">
               <p>
-                +02 1234567890
+                +63 9485598856 
               </p>
             </div>
           </div>
@@ -154,7 +152,7 @@
             </div>
             <div class="detail-box">
               <p>
-                demo@gmail.com
+                citygovernmentofcalapan@gmail.com
               </p>
             </div>
           </div>
@@ -162,23 +160,7 @@
       </div>
     </div>
     <div class="partner-box">
-      <h4>
-        Our Partner
-      </h4>
-      <div class="box">
-        <a href="">
-          <img src="images/google.png" alt="">
-        </a>
-        <a href="">
-          <img src="images/yahoo.png" alt="">
-        </a>
-        <a href="">
-          <img src="images/mastercard.png" alt="">
-        </a>
-        <a href="">
-          <img src="images/jcb.png" alt="">
-        </a>
-      </div>
+      
     </div>
   </section>
 
@@ -189,8 +171,7 @@
   <!-- footer section -->
   <section class="container-fluid footer_section">
     <p>
-      &copy; 2020 All Rights Reserved. Design by
-      <a href="https://html.design/">Free Html Templates</a> Distribution <a href="https://themewagon.com">ThemeWagon</a>
+    &copy; <?php echo date("Y"); ?> All Rights Reserved. Design by CAPSTONE TEAM GROUP 1 - City College of Calapan
     </p>
   </section>
   <!-- footer section -->

@@ -75,6 +75,7 @@ body {
         padding-right: 25px;
         padding-left: 25px;
     }
+    
 }
 
 .sub_page .hero_area {
@@ -856,7 +857,7 @@ a:focus {
     }
 }
 
-.info_items {
+.info_items { 
     .item {
         .img-box {
             &.box-1 {
@@ -872,7 +873,7 @@ a:focus {
             }
 
             &:hover {
-                background-color: #20cc8e;
+                background-color: #c120cc;
 
                 &.box-1 {
                     background-image: url(../images/location-white.png);

@@ -32,7 +32,7 @@ body {
 /*header section*/
 .hero_area {
   height: 100vh;
-  background-image: url(../images/hero.jpg);
+  background-image: url(../images/cgc.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -141,7 +141,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgba(44, 195, 142, 0.95);
+  background-color: rgba(202, 58, 255, 0.95);
   overflow-x: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -447,7 +447,7 @@ a:focus {
   width: 75px;
   height: 75px;
   border-radius: 100%;
-  background-color: #00d188;
+  background-color: #b700ae;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -524,7 +524,7 @@ a:focus {
 }
 
 .business_section {
-  background-color: #00d188;
+  background-color: #660085;
 }
 
 .business_section .container {
@@ -654,13 +654,13 @@ a:focus {
 .make_section h2.make-heading {
   text-transform: none;
   font-size: 5rem;
-  color: #00d188;
+  color: #5B228B;
   font-weight: bold;
 }
 
 .online_section h2 {
   text-align: center;
-  border-bottom: 1px solid #00d188;
+  border-bottom: 1px solid #911c97;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -899,7 +899,7 @@ a:focus {
 }
 
 .info_items .item .img-box:hover {
-  background-color: #20cc8e;
+  background-color: #5B228B;
 }
 
 .info_items .item .img-box:hover.box-1 {
@@ -923,7 +923,7 @@ a:focus {
 }
 
 .footer_section p {
-  color: #00d188;
+  color: #650089dc;
   margin: 0;
   text-align: center;
 }
