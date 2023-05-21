@@ -27,3 +27,14 @@ body {
     border-radius: 8px;
     
 }
+
+
+@media only screen and (max-width: 500px) {
+    .ofc-card {
+        flex-direction: column;
+    }
+
+    .ofc-card .ofc-item {
+        width: 100% !important;
+    }
+}
