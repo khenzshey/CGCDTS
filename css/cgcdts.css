@@ -1,0 +1,29 @@
+
+
+
+/* Callable CSS */
+
+/* --text */
+.lg-fs {
+    font-size: 20px;
+}
+
+
+.d-rounded {
+    border-radius: 28px;
+}
+
+/* Cards */
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.login-card {
+    width: 420px;
+    width: 420px;
+    padding: 8px 12px;
+    border: 1px solid #d2d2d2;
+    border-radius: 8px;
+    
+}
