@@ -36,7 +36,7 @@
 						Pages
 					</li>
 
-					<li class="sidebar-item active">
+					<li class="sidebar-item">
 						<a class="sidebar-link" href="index.php">
                         <i class="far fa-chart-pie-alt"></i><span class="align-middle">Dashboard</span>
             </a>

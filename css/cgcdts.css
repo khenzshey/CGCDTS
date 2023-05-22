@@ -10,7 +10,10 @@
 
 
 .d-rounded {
-    border-radius: 28px;
+    border-radius: 50px;
+}
+.btn-rounded{
+    border-radius: 12px;
 }
 
 /* Cards */
@@ -27,7 +30,6 @@ body {
     border-radius: 8px;
     
 }
-
 
 @media only screen and (max-width: 500px) {
     .ofc-card {
