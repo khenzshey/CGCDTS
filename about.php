@@ -83,7 +83,7 @@
     <div class="row">
       <div class="col-md-5 offset-md-1">
         <div class="img-box">
-          <img src="" alt="" />
+          <img src="images\CGCDTSLOGO.png" alt="" />
           
         </div>
       </div>
