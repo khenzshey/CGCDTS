@@ -1,0 +1,99 @@
+<?php
+
+require_once '../includes/sidebar_header.php';
+
+class Admin
+{
+    private $conn;
+    private $offices;
+
+    function __construct($conn, $offices)
+    {
+        $this->conn = $conn;
+        $this->offices = $offices;
+    }
+
+    public function getAdmins()
+    {
+        try {
+            $sql = "SELECT * FROM admin WHERE status = 'active'";
+            $result = $this->conn->query($sql);
+            return $result->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    public function getAdminById($id)
+    {
+        try {
+            $sql = "SELECT * FROM admin WHERE id = $id AND status = 'active'";
+            $result = $this->conn->query($sql);
+            return $result->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    public function addAdmin($last_name, $first_name, $middle_name, $department_id, $position)
+    {
+        try {
+            // Get department name based on department_id
+            $department = $this->offices->getOfficeById($department_id);
+
+            if ($department) {
+                $department_name = $department['department_name'];
+
+                $sql = "INSERT INTO admin (last_name, first_name, middle_name, department, position, status) VALUES (:last_name, :first_name, :middle_name, :department, :position, 'active')";
+                $stmt = $this->conn->prepare($sql);
+                $stmt->bindParam(':last_name', $last_name);
+                $stmt->bindParam(':first_name', $first_name);
+                $stmt->bindParam(':middle_name', $middle_name);
+                $stmt->bindParam(':department', $department_name);
+                $stmt->bindParam(':position', $position);
+                $stmt->execute();
+
+                return true;
+            } else {
+                echo "Invalid department selected.";
+                return false;
+            }
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            return false;
+        }
+    }
+}
+
+$admin = new Admin($conn, $offices);
+
+// Add admin
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['admin_lname'], $_POST['admin_fname'], $_POST['admin_mname'], $_POST['department_id'], $_POST['admin_position'])) {
+        $last_name = $_POST['admin_lname'];
+        $first_name = $_POST['admin_fname'];
+        $middle_name = $_POST['admin_mname'];
+        $department_id = $_POST['department_id'];
+        $position = $_POST['admin_position'];
+
+        if ($admin->addAdmin($last_name, $first_name, $middle_name, $department_id, $position)) {
+            header('Location: admin_user_management.php?add=success');
+            exit;
+        } else {
+            header('Location: admin_user_management.php?add=failed');
+            exit;
+        }
+    }
+}
+
+// Fetch admins
+$users = $admin->getAdmins();
+
+?>
+
+<main class="content">
+    <div class="container-fluid p-0">
+        <?php if (isset($_GET['add']) && $_GET['add'] === "success"): ?>
+            <div class="alert alert-success" id="my-alert" role="alert"> Account has been added successfully. </div>
+        <?php endif; ?>
+        <?php if (isset($_GET['add']) &&

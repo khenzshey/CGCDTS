@@ -46,7 +46,7 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-profile.html">
+						<a class="sidebar-link" href="admin_user_management.php">
 							<i class="far fa-users"></i><span class="align-middle">User Management</span>
 						</a>
 					</li>

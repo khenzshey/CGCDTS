@@ -50,7 +50,6 @@ $allOffice = $office->getOffices();
                         class="fal fa-edit"></i></a>
                     <a href="office_management.php?id=<?php echo $ofc['id']; ?>" class="btn btn-sm btn-warning"><i
                         class="fas fa-minus-hexagon"></i></a>
-
                   </td>
                 </tr>
               <?php endforeach; ?>
