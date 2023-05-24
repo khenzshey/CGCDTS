@@ -58,7 +58,7 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-sign-in.html">
+						<a class="sidebar-link" href="document_list.php">
 							<i class="fal fa-file-alt"></i> <span class="align-middle">Document List</span>
 						</a>
 					</li>

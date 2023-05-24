@@ -19,7 +19,8 @@ $db = new Connection();
 $conn = $db->conn();
 
 $office = new Offices($conn);
-$admins = new Admin($conn);  
+$admins = new Admin($conn);
+$documents = new Documents($conn);
 
 
 //include_once '../includes/session.php';
