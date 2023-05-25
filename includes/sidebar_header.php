@@ -64,7 +64,7 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-sign-in.html">
+						<a class="sidebar-link" href="reports.php">
 							<i class="fad fa-analytics"></i> <span class="align-middle">Reports</span>
 						</a>
 					</li>
