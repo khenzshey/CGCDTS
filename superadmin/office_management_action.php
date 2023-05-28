@@ -33,11 +33,10 @@ if (isset($_GET['id'])) {
                         </div>
                     </div>
                 </div>
-
             </div>
+        </form>
+    </div>
 </main>
-
-
 <script>
     function goBack() {
         var confirmation = confirm("Are you sure you want to cancel? Any unsaved changes will be lost.");

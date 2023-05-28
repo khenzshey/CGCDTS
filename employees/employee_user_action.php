@@ -50,8 +50,6 @@ if (isset($_GET['id'])) {
         </form>
     </div>
 </main>
-
-
 <script>
     function goBack() {
         var confirmation = confirm("Are you sure you want to cancel? Any unsaved changes will be lost.");
