@@ -1,6 +1,6 @@
 <?php
 
-class Employee
+class User
 {
     private $conn;
 
@@ -40,7 +40,7 @@ class Employee
     {
         try {
 
-            $sql = "INSERT INTO employees (employee_id, last_name, first_name, middle_name, department, position, status) VALUES (:employee_id, :last_name, :first_name, :middle_name, :department, :position, 'active')";
+            $sql = "INSERT INTO user (employee_id, last_name, first_name, middle_name, department, position, status) VALUES (:employee_id, :last_name, :first_name, :middle_name, :department, :position, 'active')";
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':employee_id', $employee_id);
             $stmt->bindParam(':last_name', $last_name);
@@ -57,7 +57,7 @@ class Employee
             return false;
         }
     }
-    
+
 
     public function editEmployee($id, $employee_id, $last_name, $first_name, $middle_name, $position)
     {

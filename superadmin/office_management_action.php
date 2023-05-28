@@ -23,7 +23,7 @@ if (isset($_GET['id'])) {
                             <div class="form-group m-0 m-2">
                                 <label class="form-label m-0">Description</label>
                                 <textarea name="office_desc" class="form-control" id="5" cols="3" rows="10"
-                                    required><?php echo $officeData['department_description'] ?></textarea>
+                                    required><?php echo trim($officeData['department_description']) ?></textarea>
                             </div>
                             <button type="submit" name="edit_office"
                                 class="btn btn-outline-success m-0 m-2 d-rounded py-2 px-3">Update

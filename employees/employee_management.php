@@ -12,6 +12,12 @@ $employees = $employee->getEmployees();
         <?php if (isset($_GET['add']) and $_GET['add'] == "failed") {
             echo '<div class="alert alert-danger" id="my-alert" role="alert"> Failed to add Account. </div>';
         } ?>
+        <?php if (isset($_GET['edit']) and $_GET['edit'] == "success") {
+            echo '<div class="alert alert-success" id="my-alert" role="alert"> Office Information has been edited successfully. </div>';
+        } ?>
+        <?php if (isset($_GET['edit']) and $_GET['edit'] == "failed") {
+            echo '<div class="alert alert-danger" id="my-alert" role="alert"> Failed to edit Office Information. </div>';
+        } ?>
         <h1 class="h3 mb-3">User Management</h1>
         <form action="../controller/employee_user_add.php" method="POST">
             <div class="user$user-card d-flex justify-content-start flex p-2 gap-3">
@@ -54,7 +60,7 @@ $employees = $employee->getEmployees();
                         </div>
                     </div>
                 </div>
-                <div class="user user-item w-50">
+                <div class="user user-item ">
                     <table class="table table-hover">
                         <th>ID Number</th>
                         <th>Last Name</th>
@@ -89,8 +95,8 @@ $employees = $employee->getEmployees();
                                         <?php echo $emp['status'] ?>
                                     </td>
                                     <td>
-                                        <a href="?id=<?php echo $emp['id']; ?>" class="btn btn-sm btn-success "><i
-                                                class="fal fa-edit"></i></a>
+                                        <a href="employee_user_action.php?id=<?php echo $emp['employee_id']; ?>"
+                                            class="btn btn-sm btn-success "><i class="fal fa-edit"></i></a>
                                         <a href="employee_management.php?id=<?php echo $emp['id']; ?>"
                                             class="btn btn-sm btn-warning"><i class="fas fa-minus-hexagon"></i></a>
                                     </td>
