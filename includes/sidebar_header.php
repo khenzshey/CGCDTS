@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="../css/all.min.css">
 	<link rel="stylesheet" href="../css/cgcdts.css?v.1">
 
-	<title>AdminKit Demo - Bootstrap 5 Admin Template</title>
+	<title>City Government of Calapan Document Tracking System</title>
 	<script src="../js/all.min.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">

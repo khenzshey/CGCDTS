@@ -1,5 +1,6 @@
 <?php
-if (isset($_POST['admin_lname'])) {
+if (isset($_POST['admin_id'])) {
+    $admin_id = $_POST['admin_id'];
     $last_name = $_POST['admin_lname'];
     $first_name = $_POST['admin_fname'];
     $middle_name = $_POST['admin_mname'];
@@ -9,7 +10,7 @@ if (isset($_POST['admin_lname'])) {
     require_once '../config/connection.php';
 
 
-    $addAdmin = $admins->addAdmin($last_name, $first_name, $middle_name, $department_id, $position);
+    $addAdmin = $admins->addAdmin($admin_id, $last_name, $first_name, $middle_name, $department_id, $position);
 
     // if ($addAdmin) {
     //     header('location: ../admin/admin_management.php?add=success');
