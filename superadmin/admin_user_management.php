@@ -1,7 +1,7 @@
 <?php
 require_once '../includes/sidebar_header.php';
 
-$departments = $office->getOfficeById();
+$departments = $admins->getDepartmentById();
 $users = $admins->getAdmins();
 ?>
 <main class="content">

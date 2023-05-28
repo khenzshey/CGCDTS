@@ -3,10 +3,12 @@
 class Admin
 {
     private $conn;
+    private $office;
 
     function __construct($conn)
     {
         $this->conn = $conn;
+        this->office = $office;
     }
 
     public function getAdmins()
@@ -37,8 +39,8 @@ class Admin
     {
         try {
             // Get department name and office details based on department_id
-            $department = $this->getDepartmentById($department_id);
-            $office = $this->getOfficeByDepartmentId($department_id);
+            $department = $this->getOfficeById($department_id);
+            $office = $this->getOfficeById($department_id);
 
             if ($department && $office) {
                 $department_name = $department['department_name'];
@@ -65,29 +67,29 @@ class Admin
         }
     }
 
-    private function getDepartmentById($department_id)
-    {
-        try {
-            $sql = "SELECT * FROM department WHERE id = $department_id";
-            $result = $this->conn->query($sql);
-            return $result->fetch(PDO::FETCH_ASSOC);
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-            return false;
-        }
-    }
+//      function getDepartmentById($department_id)
+//     {
+//         try {
+//             $sql = "SELECT * FROM department_offices WHERE id = $department_id";
+//             $result = $this->conn->query($sql);
+//             return $result->fetch(PDO::FETCH_ASSOC);
+//         } catch (PDOException $e) {
+//             echo $e->getMessage();
+//             return false;
+//         }
+//     }
 
-    private function getOfficeByDepartmentId($department_id)
-    {
-        try {
-            $sql = "SELECT * FROM department_office WHERE department_id = $department_id";
-            $result = $this->conn->query($sql);
-            return $result->fetch(PDO::FETCH_ASSOC);
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-            return false;
-        }
-    }
+//     private function getOfficeByDepartmentId($department_id)
+//     {
+//         try {
+//             $sql = "SELECT * FROM department_offices WHERE id = $department_id";
+//             $result = $this->conn->query($sql);
+//             return $result->fetch(PDO::FETCH_ASSOC);
+//         } catch (PDOException $e) {
+//             echo $e->getMessage();
+//             return false;
+//         }
+//     }
 }
 
 ?>
