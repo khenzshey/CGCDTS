@@ -12,10 +12,9 @@ if (isset($_POST['admin_id'])) {
 
     $addAdmin = $admins->addAdmin($admin_id, $last_name, $first_name, $middle_name, $department_id, $position);
 
-    // if ($addAdmin) {
-    //     header('location: ../admin/admin_management.php?add=success');
-    // } else {
-    //     header('location: ../admin/admin_management.php?add=failed');
-    // }
+    if ($addAdmin) {
+        header('location: ../superadmin/admin_user_management.php?add=success');
+    } else {
+        header('location: ../superadmin/admin_user_management.php?add=failed');
+    }
 }
-?>

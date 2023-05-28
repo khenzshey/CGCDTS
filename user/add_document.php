@@ -34,32 +34,32 @@ $addDocument = $document->getDocument();
           </div>
         </div>
         <div class="ofc-item w-50">
-        <table class="table table-hover">
-                <th>Document Number</th>
-                <th>Document Title</th>
-                <th>Office Name</th>
-                <th>Document Status</th>
-                <th>Remarks</th>
-                <tbody>
+          <table class="table table-hover">
+            <th>Document Number</th>
+            <th>Document Title</th>
+            <th>Office Name</th>
+            <th>Document Status</th>
+            <th>Remarks</th>
+            <tbody>
 
-                    <?php foreach ($addDocument as $document): ?>
-                        <tr>
-                            <td>
-                                <?php echo $document['doc_num'] ?>
-                            </td>
-                            <td>
-                                <?php echo $document['doc_title'] ?>
-                            </td>
-                            <td>
-                                <?php echo $document['office_name'] ?>
-                            </td>
-                            <td>
-                                <?php echo $document['doc_status'] ?>
-                            </td>
-                            <td>
-                                <?php echo $document['remarks'] ?>
-                            </td>
-                            <td>
+              <?php foreach ($addDocument as $document): ?>
+                <tr>
+                  <td>
+                    <?php echo $document['doc_num'] ?>
+                  </td>
+                  <td>
+                    <?php echo $document['doc_title'] ?>
+                  </td>
+                  <td>
+                    <?php echo $document['office_name'] ?>
+                  </td>
+                  <td>
+                    <?php echo $document['doc_status'] ?>
+                  </td>
+                  <td>
+                    <?php echo $document['remarks'] ?>
+                  </td>
+                  <td>
                     <a href="add_document_action.php?id=<?php echo $document['id']; ?>" class="btn btn-sm btn-success "><i
                         class="fal fa-edit"></i></a>
                     <a href="add_document.php?id=<?php echo $document['id']; ?>" class="btn btn-sm btn-warning"><i

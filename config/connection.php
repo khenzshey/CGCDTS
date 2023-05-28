@@ -21,6 +21,7 @@ $conn = $db->conn();
 $office = new Offices($conn);
 $admins = new Admin($conn);
 $documents = new Documents($conn);
-
+$document = new Add_Document($conn);
+$employee = new Employee($conn);
 
 //include_once '../includes/session.php';
