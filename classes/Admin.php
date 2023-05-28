@@ -2,7 +2,6 @@
 
 class Admin
 {
-
     private $conn;
 
     function __construct($conn)
@@ -10,25 +9,85 @@ class Admin
         $this->conn = $conn;
     }
 
-    public function addAdmin($admin_lname, $admin_fname, $admin_mname, $department_id, $admin_position)
+    public function getAdmins()
     {
         try {
-            $sql = "INSERT INTO admins (last_name, first_name, middle_name, department_id, position) 
-            VALUES (:last_name, :first_name, :middle_name, :department_id, :position)";
-            $stmt = $this->conn->prepare($sql);
-            $stmt->bindParam(':last_name', $admin_lname);
-            $stmt->bindParam(':first_name', $admin_fname);
-            $stmt->bindParam(':middle_name', $admin_mname);
-            $stmt->bindParam(':department_id', $department_id);
-            $stmt->bindParam(':position', $admin_position);
-            $stmt->execute();
+            $sql = "SELECT * FROM admin WHERE status = 'active'";
+            $result = $this->conn->query($sql);
+            return $result->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            return false;
+        }
+    }
 
-            return true;
+    public function getAdminById($id)
+    {
+        try {
+            $sql = "SELECT * FROM admin WHERE id = $id AND status = 'active'";
+            $result = $this->conn->query($sql);
+            return $result->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            return false;
+        }
+    }
 
+    public function addAdmin($last_name, $first_name, $middle_name, $department_id, $position)
+    {
+        try {
+            // Get department name and office details based on department_id
+            $department = $this->getDepartmentById($department_id);
+            $office = $this->getOfficeByDepartmentId($department_id);
+
+            if ($department && $office) {
+                $department_name = $department['department_name'];
+                $office_name = $office['office_name'];
+
+                $sql = "INSERT INTO admin (last_name, first_name, middle_name, department, office, position, status) VALUES (:last_name, :first_name, :middle_name, :department, :office, :position, 'active')";
+                $stmt = $this->conn->prepare($sql);
+                $stmt->bindParam(':last_name', $last_name);
+                $stmt->bindParam(':first_name', $first_name);
+                $stmt->bindParam(':middle_name', $middle_name);
+                $stmt->bindParam(':department', $department_name);
+                $stmt->bindParam(':office', $office_name);
+                $stmt->bindParam(':position', $position);
+                $stmt->execute();
+
+                return true;
+            } else {
+                echo "Invalid department selected.";
+                return false;
+            }
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            return false;
+        }
+    }
+
+    private function getDepartmentById($department_id)
+    {
+        try {
+            $sql = "SELECT * FROM department WHERE id = $department_id";
+            $result = $this->conn->query($sql);
+            return $result->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            return false;
+        }
+    }
+
+    private function getOfficeByDepartmentId($department_id)
+    {
+        try {
+            $sql = "SELECT * FROM department_office WHERE department_id = $department_id";
+            $result = $this->conn->query($sql);
+            return $result->fetch(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             echo $e->getMessage();
             return false;
         }
     }
 }
+
 ?>

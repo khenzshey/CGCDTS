@@ -1,8 +1,8 @@
 <?php
 require_once '../includes/sidebar_header.php';
 
-$departments = $office->getOffices();
-$users = $admin->getAdmins();
+$departments = $office->getOfficeById();
+$users = $admins->getAdmins();
 ?>
 <main class="content">
     <div class="container-fluid p-0">
