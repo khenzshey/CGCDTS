@@ -2,7 +2,7 @@
 require_once '../includes/sidebar_header.php';
 
 $departments = $office->getOffices();
-$users = $admins->getAdmins();
+$employees = $employee->getEmployees();
 ?>
 <main class="content">
     <div class="container-fluid p-0">
@@ -13,26 +13,25 @@ $users = $admins->getAdmins();
             echo '<div class="alert alert-danger" id="my-alert" role="alert"> Failed to add Account. </div>';
         } ?>
         <h1 class="h3 mb-3">User Management</h1>
-        <form action="../controller/admin_user_add.php" method="POST">
+        <form action="../controller/employee_user_add.php" method="POST">
             <div class="user$user-card d-flex justify-content-start flex p-2 gap-3">
                 <div class="user$user-item w-50">
                     <div class="card">
                         <div class="card-body">
                             <h4>Add User</h4>
                             <div class="form-group m-0 m-2">
-                                <input type="text" name="admin_id" class="form-control" placeholder="admin Id"
+                                <input type="text" name="emp_id" class="form-control" placeholder="Id Number" required>
+                            </div>
+                            <div class="form-group m-0 m-2">
+                                <input type="text" name="emp_lname" class="form-control" placeholder="Last Name"
                                     required>
                             </div>
                             <div class="form-group m-0 m-2">
-                                <input type="text" name="admin_lname" class="form-control" placeholder="Last Name"
+                                <input type="text" name="emp_fname" class="form-control" placeholder="First Name"
                                     required>
                             </div>
                             <div class="form-group m-0 m-2">
-                                <input type="text" name="admin_fname" class="form-control" placeholder="First Name"
-                                    required>
-                            </div>
-                            <div class="form-group m-0 m-2">
-                                <input type="text" name="admin_mname" class="form-control" placeholder="Middle Name"
+                                <input type="text" name="emp_mname" class="form-control" placeholder="Middle Name"
                                     required>
                             </div>
                             <div class="form-group m-0 m-2">
@@ -47,15 +46,15 @@ $users = $admins->getAdmins();
                             </div>
 
                             <div class="form-group m-0 m-2">
-                                <input type="text" name="admin_position" class="form-control" placeholder="Position"
+                                <input type="text" name="emp_position" class="form-control" placeholder="Position"
                                     required>
                             </div>
-                            <button type="submit" class="btn btn-outline-success m-0 m-2 d-rounded py-2 px-3">Create
-                                Admin</button>
+                            <button type="submit" class="btn btn-outline-success m-0 m-2 d-rounded py-2 px-3">Add
+                                Employee</button>
                         </div>
                     </div>
                 </div>
-                <div class="user$user-item w-50">
+                <div class="user user-item w-50">
                     <table class="table table-hover">
                         <th>ID Number</th>
                         <th>Last Name</th>
@@ -66,35 +65,34 @@ $users = $admins->getAdmins();
                         <th>Status</th>
                         <th>Action</th>
                         <tbody>
-                            <?php foreach ($users as $user): ?>
+                            <?php foreach ($employees as $emp): ?>
                                 <tr>
                                     <td>
-                                        <?php echo $user['admin_id'] ?>
+                                        <?php echo $emp['employee_id'] ?>
                                     </td>
                                     <td>
-                                        <?php echo $user['last_name'] ?>
+                                        <?php echo $emp['last_name'] ?>
                                     </td>
                                     <td>
-                                        <?php echo $user['first_name'] ?>
+                                        <?php echo $emp['first_name'] ?>
                                     </td>
                                     <td>
-                                        <?php echo $user['middle_name'] ?>
+                                        <?php echo $emp['middle_name'] ?>
                                     </td>
                                     <td>
-                                        <?php echo $user['department_name'] ?>
+                                        <?php echo $emp['department_name'] ?>
                                     </td>
                                     <td>
-                                        <?php echo $user['position'] ?>
+                                        <?php echo $emp['position'] ?>
                                     </td>
                                     <td>
-                                        <?php echo $user['status'] ?>
+                                        <?php echo $emp['status'] ?>
                                     </td>
                                     <td>
-                                        <a href="?id=<?php echo $user['id']; ?>" class="btn btn-sm btn-success "><i
+                                        <a href="?id=<?php echo $emp['id']; ?>" class="btn btn-sm btn-success "><i
                                                 class="fal fa-edit"></i></a>
-                                        <a href="admin_user_management.php?id=<?php echo $user['id']; ?>"
+                                        <a href="employee_management.php?id=<?php echo $emp['id']; ?>"
                                             class="btn btn-sm btn-warning"><i class="fas fa-minus-hexagon"></i></a>
-
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
