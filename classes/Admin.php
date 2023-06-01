@@ -79,6 +79,9 @@ class Admin
 //             return false;
 //         }
 //     }
+
+public function deactivateAdmin(){
 }
+}  
 
 ?>
