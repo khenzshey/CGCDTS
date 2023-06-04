@@ -20,8 +20,7 @@ $users = $admins->getAdmins();
                         <div class="card-body">
                             <h4>Add User</h4>
                             <div class="form-group m-0 m-2">
-                                <input type="text" name="admin_id" class="form-control" placeholder="admin Id"
-                                    required>
+                                <input type="text" name="admin_id" class="form-control" placeholder="admin Id" required>
                             </div>
                             <div class="form-group m-0 m-2">
                                 <input type="text" name="admin_lname" class="form-control" placeholder="Last Name"

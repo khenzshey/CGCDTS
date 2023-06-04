@@ -23,5 +23,6 @@ $admins = new Admin($conn);
 $documents = new Documents($conn);
 $document = new Add_Document($conn);
 $employee = new Employee($conn);
+$accounts = new Accounts($conn);
 
 //include_once '../includes/session.php';

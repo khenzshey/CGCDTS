@@ -9,6 +9,31 @@ class Offices
         $this->conn = $conn;
     }
 
+    public function getUserRole()
+    {
+        try {
+
+            $sql = "SELECT * FROM user_role";
+            $result = $this->conn->query($sql);
+            return $result->fetchAll(PDO::FETCH_ASSOC);
+
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+    public function getDeptHeadRole()
+    {
+        try {
+
+            $sql = "SELECT * FROM user_role where role_id = '2'";
+            $result = $this->conn->query($sql);
+            return $result->fetchAll(PDO::FETCH_ASSOC);
+
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+
     public function getOffices()
     {
         try {
