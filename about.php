@@ -12,17 +12,19 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>CGCDTS</title>
-  <link rel="icon" href="images/cgclogo.png" type="image/x-icon">
+  <title>City Government of Calapan Document Tracking System</title>
+  <link rel="icon" href="images/CGCDTSLOGO.png" type="image/x-icon">
 
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
   <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap"
+    rel="stylesheet" />
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
@@ -36,6 +38,9 @@
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="index.php">
+            <div class="img-box box-3">
+              <img src="images/CGCDTSLOGO.png" alt="">
+            </div>
             <span>
               CGCDTS
             </span>
@@ -84,7 +89,7 @@
       <div class="col-md-5 offset-md-1">
         <div class="img-box">
           <img src="images\CGCDTSLOGO.png" alt="" />
-          
+
         </div>
       </div>
       <div class="col-md-6 col-lg-4">
@@ -93,12 +98,12 @@
             About Us
           </h3>
           <p>
-          Welcome to the City Government of Calapan Document Tracking System! 
-          We are dedicated to enhancing transparency, efficiency, and accountability 
-          in our administrative processes. Our system automates document workflows, 
-          provides real-time status updates, and ensures secure data management. 
-          Join us in our mission to revolutionize document management and deliver 
-          exceptional public service in Calapan.
+            Welcome to the City Government of Calapan Document Tracking System!
+            We are dedicated to enhancing transparency, efficiency, and accountability
+            in our administrative processes. Our system automates document workflows,
+            provides real-time status updates, and ensures secure data management.
+            Join us in our mission to revolutionize document management and deliver
+            exceptional public service in Calapan.
           </p>
         </div>
       </div>
@@ -140,7 +145,7 @@
             </div>
             <div class="detail-box">
               <p>
-                +63 9485598856 
+                +63 9485598856
               </p>
             </div>
           </div>
@@ -160,7 +165,7 @@
       </div>
     </div>
     <div class="partner-box">
-      
+
     </div>
   </section>
 
@@ -171,7 +176,8 @@
   <!-- footer section -->
   <section class="container-fluid footer_section">
     <p>
-    &copy; <?php echo date("Y"); ?> All Rights Reserved. Design by CAPSTONE TEAM GROUP 1 - City College of Calapan
+      &copy;
+      <?php echo date("Y"); ?> All Rights Reserved. Design by CAPSTONE TEAM GROUP 1 - City College of Calapan
     </p>
   </section>
   <!-- footer section -->

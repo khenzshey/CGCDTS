@@ -6,6 +6,9 @@
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg custom_nav-container">
         <a class="navbar-brand" href="index.php">
+          <div class="img-box box-3">
+            <img src="images/CGCDTSLOGO.png" alt="">
+          </div>
           <span>
             CGCDTS
           </span>
@@ -70,7 +73,6 @@
         </div>
       </div>
     </div>
-
 </div>
 </div>
 </div>

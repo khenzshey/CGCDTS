@@ -20,7 +20,7 @@ if (!isset($_SESSION["account_id"])) {
 		content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+	<link rel="icon" href="../images/CGCDTSLOGO.png" type="image/x-icon">
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
 	<link rel="stylesheet" href="../css/all.min.css">
@@ -43,10 +43,6 @@ if (!isset($_SESSION["account_id"])) {
 					<span class="align-middle">CGCDTS</span>
 				</a>
 				<ul class="sidebar-nav">
-					<li class="sidebar-header">
-						Pages
-					</li>
-
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="index.php">
 							<i class="far fa-chart-pie-alt"></i><span class="align-middle">Dashboard</span>

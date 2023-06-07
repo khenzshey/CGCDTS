@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 28, 2023 at 12:53 PM
+-- Generation Time: Jun 07, 2023 at 06:18 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -24,26 +24,52 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `accounts`
+--
+
+CREATE TABLE `accounts` (
+  `account_id` int NOT NULL,
+  `admin_id` varchar(255) NOT NULL,
+  `username` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `role_id` int DEFAULT NULL,
+  `position` varchar(255) NOT NULL,
+  `status` enum('active','inactive') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `accounts`
+--
+
+INSERT INTO `accounts` (`account_id`, `admin_id`, `username`, `password`, `role_id`, `position`, `status`) VALUES
+(15, '5467', 'admin2', '123', 1, 'magtataho', 'active'),
+(16, '1234', 'admin', '123', 2, 'Student', 'active'),
+(17, '9874', 'deTest', '123', 3, 'Student', 'active');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
-  `id` int NOT NULL,
   `admin_id` varchar(255) NOT NULL,
-  `last_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `first_name` varchar(255) NOT NULL,
-  `middle_name` varchar(255) NOT NULL,
-  `department` varchar(255) NOT NULL,
-  `position` varchar(255) NOT NULL,
-  `status` varchar(255) NOT NULL
+  `lname` varchar(50) DEFAULT NULL,
+  `fname` varchar(50) DEFAULT NULL,
+  `mname` varchar(50) DEFAULT NULL,
+  `department` varchar(50) DEFAULT NULL,
+  `position` varchar(50) DEFAULT NULL,
+  `status` enum('active','inactive') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id`, `admin_id`, `last_name`, `first_name`, `middle_name`, `department`, `position`, `status`) VALUES
-(1, '5467', 'Sarmiento', 'Ninya', 'Mendoza', '14', 'magtataho', 'active');
+INSERT INTO `admin` (`admin_id`, `lname`, `fname`, `mname`, `department`, `position`, `status`) VALUES
+('1234', 'Jabat', 'aerol', 'aerol', '14', 'Student', 'active'),
+('5467', 'Sarmiento', 'Ninya', 'Mendoza', '13', 'magtataho', 'active'),
+('9874', 'Salcedo', 'Caroline', 'Pearl', '15', 'Student', 'active');
 
 -- --------------------------------------------------------
 
@@ -252,33 +278,39 @@ INSERT INTO `users` (`id`, `name`, `username`, `password`, `user_level`, `status
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_groups`
+-- Table structure for table `user_role`
 --
 
-CREATE TABLE `user_groups` (
-  `id` int NOT NULL,
-  `group_name` varchar(150) NOT NULL,
-  `group_level` int NOT NULL,
-  `group_status` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `user_role` (
+  `role_id` int NOT NULL,
+  `role_name` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `user_groups`
+-- Dumping data for table `user_role`
 --
 
-INSERT INTO `user_groups` (`id`, `group_name`, `group_level`, `group_status`) VALUES
-(1, 'System Administrator', 1, 1),
-(2, 'System Users', 2, 1);
+INSERT INTO `user_role` (`role_id`, `role_name`) VALUES
+(1, 'Super Admin'),
+(2, 'Department Head'),
+(3, 'Department Employee');
 
 --
 -- Indexes for dumped tables
 --
 
 --
+-- Indexes for table `accounts`
+--
+ALTER TABLE `accounts`
+  ADD PRIMARY KEY (`account_id`),
+  ADD UNIQUE KEY `username` (`username`);
+
+--
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`admin_id`);
 
 --
 -- Indexes for table `department_offices`
@@ -324,21 +356,20 @@ ALTER TABLE `users`
   ADD KEY `user_level` (`user_level`);
 
 --
--- Indexes for table `user_groups`
+-- Indexes for table `user_role`
 --
-ALTER TABLE `user_groups`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `group_level` (`group_level`);
+ALTER TABLE `user_role`
+  ADD PRIMARY KEY (`role_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT for table `accounts`
 --
-ALTER TABLE `admin`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `accounts`
+  MODIFY `account_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `department_offices`
@@ -369,12 +400,6 @@ ALTER TABLE `employees`
 --
 ALTER TABLE `users`
   MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `user_groups`
---
-ALTER TABLE `user_groups`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

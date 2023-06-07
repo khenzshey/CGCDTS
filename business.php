@@ -12,17 +12,19 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>CGCDTS</title>
-  <link rel="icon" href="images/cgclogo.png" type="image/x-icon">
+  <title>City Government of Calapan Document Tracking System</title>
+  <link rel="icon" href="images/CGCDTSLOGO.png" type="image/x-icon">
 
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
   <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap"
+    rel="stylesheet" />
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
@@ -36,6 +38,9 @@
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="login.php">
+            <div class="img-box box-3">
+              <img src="images/CGCDTSLOGO.png" alt="">
+            </div>
             <span>
               CGCDTS
             </span>
@@ -82,16 +87,16 @@
   <section class="business_section layout_padding">
     <div class="container">
       <h2>
-        City Government of Calapan 
+        City Government of Calapan
       </h2>
       <p>
-      The City Government of Calapan oversees the administration and 
-      services of Calapan City in Oriental Mindoro, Philippines. 
-      Led by the Mayor and City Council, it provides essential 
-      programs in education, healthcare, infrastructure, public safety, 
-      and economic development. Transparency, accountability, and 
-      public engagement are key values, and collaborations with various 
-      stakeholders support the city's growth.
+        The City Government of Calapan oversees the administration and
+        services of Calapan City in Oriental Mindoro, Philippines.
+        Led by the Mayor and City Council, it provides essential
+        programs in education, healthcare, infrastructure, public safety,
+        and economic development. Transparency, accountability, and
+        public engagement are key values, and collaborations with various
+        stakeholders support the city's growth.
       </p>
     </div>
     <div class="business_container">
@@ -101,9 +106,9 @@
             VISION
           </h3>
           <p>
-          METRO CALAPAN 2026: MIMAROPA’s</br>
-          Premier of Investments and </br>
-          Agro-industry.</br>
+            METRO CALAPAN 2026: MIMAROPA’s</br>
+            Premier of Investments and </br>
+            Agro-industry.</br>
           </p>
         </div>
       </div>
@@ -113,11 +118,11 @@
             MISSION
           </h3>
           <p>
-          The City of Calapan shall initiate and </br>
-          sustain programs to create an environment </br>
-          conducive to development and progress </br>
-          thru transparent and participatory </br>
-          governance.</br>
+            The City of Calapan shall initiate and </br>
+            sustain programs to create an environment </br>
+            conducive to development and progress </br>
+            thru transparent and participatory </br>
+            governance.</br>
           </p>
         </div>
 
@@ -129,14 +134,14 @@
             Calapan Offical Website</br>
           </h3>
           <p>
-          Explore the official website of the City Government </br>
-          of Calapan for up-to-date information on </br> 
-          governance, development projects, and </br>
-          community initiatives. </br>
-          Access government services, programs, and resources </br>
-          that cater to the needs of our vibrant city. Stay </br>
-          informed and engaged with the latest news and </br>
-          updates from Calapan City's administration.</br>
+            Explore the official website of the City Government </br>
+            of Calapan for up-to-date information on </br>
+            governance, development projects, and </br>
+            community initiatives. </br>
+            Access government services, programs, and resources </br>
+            that cater to the needs of our vibrant city. Stay </br>
+            informed and engaged with the latest news and </br>
+            updates from Calapan City's administration.</br>
           </p>
         </div>
         <div>
@@ -182,7 +187,7 @@
             </div>
             <div class="detail-box">
               <p>
-                +63 9485598856 
+                +63 9485598856
               </p>
             </div>
           </div>
@@ -202,7 +207,7 @@
       </div>
     </div>
     <div class="partner-box">
-      
+
     </div>
   </section>
 
@@ -213,7 +218,8 @@
   <!-- footer section -->
   <section class="container-fluid footer_section">
     <p>
-    &copy; <?php echo date("Y"); ?> All Rights Reserved. Design by CAPSTONE TEAM GROUP 1 - City College of Calapan
+      &copy;
+      <?php echo date("Y"); ?> All Rights Reserved. Design by CAPSTONE TEAM GROUP 1 - City College of Calapan
     </p>
   </section>
   <!-- footer section -->

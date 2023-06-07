@@ -12,8 +12,8 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>CGCDTS</title>
-  <link rel="icon" href="images/cgclogo.png" type="image/x-icon">
+  <title>City Government of Calapan Document Tracking System</title>
+  <link rel="icon" href="images/CGCDTSLOGO.png" type="image/x-icon">
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css"
@@ -39,6 +39,9 @@
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="index.php">
+            <div class="img-box box-3">
+              <img src="images/CGCDTSLOGO.png" alt="">
+            </div>
             <span>
               CGCDTS
             </span>
@@ -81,26 +84,30 @@
   </div>
 
   <!-- about section -->
-
   <section class="about_section layout_padding">
-    <form action="controller/login_auth.php" method="POST">
-      <div class="row">
-        <div class="col-md-12 col-lg-12 d-flex justify-content-center">
-          <div class="login-card p-4">
-            <h1 class="dislay-6 lg-fs text-center">Login</h1>
+    <div class="row">
+      <div class="col-md-12 col-lg-12 d-flex justify-content-center">
+        <div class="login-card p-4 shadow">
+          <div class="text-center">
+            <img src="images/CGCDTSLOGO.png" alt="CGCDTS" class="w-50" />
+          </div>
+          <h1 class="dislay-6 lg-fs text-center">Login</h1>
+          <form action="controller/login_auth.php" method="POST">
             <div class="form-group m-0 m-2">
               <label class="form-label m-0">Username</label>
-              <input type="text" class="form-control" name="username" placeholder="Username">
+              <input type="text" class="form-control shadow-sm" name="username" placeholder="Username" />
             </div>
             <div class="form-group m-0 m-2">
               <label class="form-label m-0">Password</label>
-              <input type="password" class="form-control" name="password" placeholder="Password">
+              <input type="password" class="form-control shadow-sm" name="password" placeholder="Password" />
             </div>
-            <button class="btn btn-outline-success m-0 m-2 d-rounded py-2 px-3">Login</button>
-          </div>
+            <div class="form-group m-0 m-2 text-center">
+              <button class="btn btn-outline-success m-0 m-2 d-rounded py-2 px-3 shadow-sm">Login</button>
+            </div>
+          </form>
         </div>
       </div>
-    </form>
+    </div>
   </section>
 
   <!-- end about section -->
