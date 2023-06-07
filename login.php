@@ -16,14 +16,16 @@
   <link rel="icon" href="images/cgclogo.png" type="image/x-icon">
 
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
   <link rel="stylesheet" type="text/css" href="css/cgcdts.css" />
 
   <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap"
+    rel="stylesheet" />
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
@@ -81,22 +83,24 @@
   <!-- about section -->
 
   <section class="about_section layout_padding">
-    <div class="row">
-      <div class="col-md-12 col-lg-12 d-flex justify-content-center">
-        <div class="login-card p-4">
+    <form action="controller/login_auth.php" method="POST">
+      <div class="row">
+        <div class="col-md-12 col-lg-12 d-flex justify-content-center">
+          <div class="login-card p-4">
             <h1 class="dislay-6 lg-fs text-center">Login</h1>
             <div class="form-group m-0 m-2">
-                <label class="form-label m-0">Username</label>
-                <input type="text" class="form-control" placeholder="Username">
+              <label class="form-label m-0">Username</label>
+              <input type="text" class="form-control" name="username" placeholder="Username">
             </div>
             <div class="form-group m-0 m-2">
-                <label class="form-label m-0">Username</label>
-                <input type="password" class="form-control" placeholder="Password">
+              <label class="form-label m-0">Password</label>
+              <input type="password" class="form-control" name="password" placeholder="Password">
             </div>
             <button class="btn btn-outline-success m-0 m-2 d-rounded py-2 px-3">Login</button>
-            
+          </div>
         </div>
-    </div>
+      </div>
+    </form>
   </section>
 
   <!-- end about section -->
@@ -134,7 +138,7 @@
             </div>
             <div class="detail-box">
               <p>
-                +63 9485598856 
+                +63 9485598856
               </p>
             </div>
           </div>
@@ -154,7 +158,7 @@
       </div>
     </div>
     <div class="partner-box">
-      
+
     </div>
   </section>
 
@@ -165,7 +169,8 @@
   <!-- footer section -->
   <section class="container-fluid footer_section">
     <p>
-    &copy; <?php echo date("Y"); ?> All Rights Reserved. Design by CAPSTONE TEAM GROUP 1 - City College of Calapan
+      &copy;
+      <?php echo date("Y"); ?> All Rights Reserved. Design by CAPSTONE TEAM GROUP 1 - City College of Calapan
     </p>
   </section>
   <!-- footer section -->

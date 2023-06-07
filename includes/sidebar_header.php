@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php require_once '../config/connection.php'; ?>
+<?php require_once '../config/connection.php';
+session_start();
+
+// Check if the user is logged in as a Department Head
+if (!isset($_SESSION["account_id"])) {
+	header("Location: ../login.php");
+	exit();
+}
+?>
 
 <head>
 	<meta charset="utf-8">
@@ -151,8 +159,9 @@
 							</div>
 						</li>
 						<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-							<img src="../img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1"
-								alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
+							<img src="" class="avatar img-fluid rounded me-1" alt="" /> <span class="text-dark">
+								<?php echo $_SESSION["username"]; ?>
+							</span>
 						</a>
 						<div class="dropdown-menu dropdown-menu-end">
 							<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1"
@@ -165,7 +174,7 @@
 							<a class="dropdown-item" href="#"><i class="align-middle me-1"
 									data-feather="help-circle"></i> Help Center</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Log out</a>
+							<a class="dropdown-item" href="../controller/logout.php">Log out</a>
 						</div>
 						</li>
 					</ul>
