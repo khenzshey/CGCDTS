@@ -4,8 +4,8 @@ require_once '../includes/sidebar_header.php';
 $departments = $office->getOffices();
 $users = $admins->getAdmins();
 ?>
-<main class="content">
-    <div class="container-fluid p-0">
+<main class="content ">
+    <div class="container-fluid p-0 gradient">
         <?php if (isset($_GET['add']) and $_GET['add'] == "success") {
             echo '<div class="alert alert-success" id="my-alert" role="alert"> Account has been added successfully. </div>';
         } ?>
