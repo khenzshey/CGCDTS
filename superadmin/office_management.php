@@ -1,4 +1,4 @@
-<?php
+  <?php
 require_once '../includes/sidebar_header.php';
 
 $allOffice = $office->getOffices();
